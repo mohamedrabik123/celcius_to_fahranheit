@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2>celcius to fahrenheit</h2>
+      <div class="inputdiv">
+        <input type="text" id="inputcm" placeholder="enter the celcius" />
+      </div>
+      <div>
+        <button type="submit" onclick="convert()">convert</button>
+      </div>
+      <div id="fahrenheit"></div>
+    </div>
+    <script>
+      function convert() {
+        let celicus = document.getElementById("inputcm").value;
+        let convert = (Number(celicus) * 9) / 5 + 32; //formula is this methode
+        let result = document.getElementById("fahrenheit");
+        result.innerHTML = "fahrenheit : " + convert;
+      }
+    </script>
+  </body>
+</html>
